@@ -55,4 +55,38 @@ class ViewController: UIViewController {
 } 
 ```
 
-And that's the entire library! 😆
+And that's the entire library! 🎉
+
+# Requirements
+* Swift 5
+* UIKit-compatible platforms (iOS, tvOS, Mac Catalyst)
+
+# Installation
+
+Beeline is a very small framework, with all of its code contained in `Router.swift`. You can install it in the following ways:
+
+## Manual Installation
+
+Drag the `Beeline/Router.swift` file into your Xcode project.
+
+## CocoaPods
+
+```
+pod 'Beeline'
+```
+
+## SPM
+
+I'll be adding this when I get the chance!
+
+## Carthage
+
+No plans to support Carthage at the moment, but please consider filing a PR if you would like it!
+
+# Credits
+
+Beeline was built as a component of iComics 2 by [Tim Oliver](https://twitter.com/TimOliverAU)
+
+# License
+
+Beeline is available under the MIT License. Please check the [LICENSE](LICENSE) file for more information.
