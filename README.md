@@ -69,17 +69,17 @@ Beeline is a very small framework, with all of its code contained in `Router.swi
 
 Drag the `Beeline/Router.swift` file into your Xcode project.
 
-## CocoaPods
+### CocoaPods
 
 ```
 pod 'Beeline'
 ```
 
-## SPM
+### SPM
 
 I'll be adding this when I get the chance!
 
-## Carthage
+### Carthage
 
 No plans to support Carthage at the moment, but please consider filing a PR if you would like it!
 
