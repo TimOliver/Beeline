@@ -17,10 +17,10 @@ We then also make a new class which subclasses `Router`, which serves as our sin
 
 ```swift
 public class AppRouter: Router {
-	override func show(_ route: Route,
-				from sourceViewController: UIViewController?) -> Bool {
+    override func show(_ route: Route,
+                        from sourceViewController: UIViewController?) -> Bool {
 
-	// Optionally, filter out routes we don't support
+        // Optionally, filter out routes we don't support
         guard let appRoute = route as? AppRoute else { return false }
 
         // Check the requested enum, and perform the transition
@@ -49,9 +49,9 @@ Finally, without any further modification to any of the child view controllers, 
 
 ```swift
 class ViewController: UIViewController {
-  func moveToNewViewController() {
-	  show(AppRoute.viewController(number: 2))
-  } 
+    func moveToNewViewController() {
+        show(AppRoute.viewController(number: 2))
+    } 
 } 
 ```
 
