@@ -43,6 +43,7 @@ open class Router: NSObject {
     /// possible to define a "default" router class. If a view controller calls `show`
     /// inside a view controller chain with no router, the view controller at the top
     /// of the chain will automatically instantiate and configure one
+    /// - Parameter routerClass: The class (as `Class.self`) that should created by default. Must be a subclass of `Router`.
     class func registerDefaultClass(_ routerClass: AnyClass?) {
         // If nil was supplied, clear the currently registered class
         guard let routerClass = routerClass else {
@@ -72,10 +73,10 @@ open class Router: NSObject {
     }
 }
 
-/// A route is a protocol which identifies any kind of object that represents
-/// a new destination screen to a router. Any type of object can be made to conform to
-/// `Route`, and when submitted to a router, it can then be identified
-/// by the custom overrided logic in that router's `show` method.
+/// A route is a protocol which identifies any kind of object that can represent
+/// a new routing destination to a router. Any type of object can be made to conform to
+/// `Route`, and when submitted to a router, its type can then be checked
+/// by the custom overrided logic in that router's `show` method to determine what to do.
 public protocol Route { }
 
 // MARK: - UIKit Integration -
@@ -98,6 +99,7 @@ public extension UIViewController {
     /// with any associated parameters. The request is sent up the view controller
     /// chain until it reaches a view controller with an assigned router, which will
     /// then serve as the source of truth for transition
+    /// - Parameter route: Any object conforming to `Route` used to uniquely identify the desired destination
     func show(_ route: Route) {
         var viewController: UIViewController? = self
 
