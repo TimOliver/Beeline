@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'Beeline'
-  s.version  = '1.0.0'
+  s.version  = '1.0.1'
   s.license  =  { :type => 'MIT', :file => 'LICENSE' }
   s.summary  = 'An extremely lean implementation on the classic iOS router pattern.'
   s.homepage = 'https://github.com/TimOliver/Beeline'
