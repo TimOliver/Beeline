@@ -33,7 +33,7 @@ import UIKit
 /// transition requests from child view controllers, and to have a single place
 /// to determine how the current state should transition to the requested one.
 ///
-public class Router: NSObject {
+open class Router: NSObject {
 
     /// A reference back to the view controller to which this router is assigned.
     weak var rootViewController: UIViewController?
