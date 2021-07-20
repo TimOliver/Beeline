@@ -1,5 +1,14 @@
 <img src="title.png" alt="Beeline" />
 
+<span align="center">
+
+[![CI](https://github.com/TimOliver/Beeline/workflows/CI/badge.svg)](https://github.com/TimOliver/Beeline/actions?query=workflow%3ACI)
+[![Version](https://img.shields.io/cocoapods/v/Beeline.svg?style=flat)](http://cocoadocs.org/docsets/Beeline)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/TimOliver/Beeline/main/LICENSE)
+[![Platform](https://img.shields.io/cocoapods/p/Beeline.svg?style=flat)](http://cocoadocs.org/docsets/Beeline)
+    
+</span>
+
 Beeline is a very small library that aims to provide a lean, automatic implementation of the classic iOS router pattern. It extends `UIViewController` to retain a `Router` object that serves as the source of truth for controlling navigation flows for all of the view controller's children. When a child view controller wishes to transition to a new screen, it can call `show()` on itself and this request is passed up the view controller chain to the routing view controller.
 
 # Instructions
