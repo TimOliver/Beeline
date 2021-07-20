@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		227B685826A706860000DD8D /* BeelineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227B685726A706860000DD8D /* BeelineTests.swift */; };
+		227B685F26A70C560000DD8D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B3A607269DCFA500E1E843 /* Router.swift */; };
 		22B3A5F2269DC48000E1E843 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B3A5F1269DC48000E1E843 /* AppDelegate.swift */; };
 		22B3A5FB269DC48100E1E843 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22B3A5FA269DC48100E1E843 /* Assets.xcassets */; };
 		22B3A5FE269DC48100E1E843 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B3A5FC269DC48100E1E843 /* LaunchScreen.storyboard */; };
@@ -16,8 +18,22 @@
 		22BCBE7326A29F350081CADE /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22BCBE7126A29F350081CADE /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		227B685A26A706860000DD8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22B3A5E6269DC48000E1E843 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22B3A5ED269DC48000E1E843;
+			remoteInfo = BeelineExample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		22B3A5EE269DC48000E1E843 /* BeelineTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeelineTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		227B685526A706860000DD8D /* BeelineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeelineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		227B685726A706860000DD8D /* BeelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeelineTests.swift; sourceTree = "<group>"; };
+		227B685926A706860000DD8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		227B686026A719FA0000DD8D /* BeelineExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeelineExample.entitlements; sourceTree = "<group>"; };
+		22B3A5EE269DC48000E1E843 /* BeelineExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeelineExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B3A5F1269DC48000E1E843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22B3A5FA269DC48100E1E843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22B3A5FD269DC48100E1E843 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -29,6 +45,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		227B685226A706860000DD8D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22B3A5EB269DC48000E1E843 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -39,11 +62,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		227B685626A706860000DD8D /* BeelineTests */ = {
+			isa = PBXGroup;
+			children = (
+				227B685726A706860000DD8D /* BeelineTests.swift */,
+				227B685926A706860000DD8D /* Info.plist */,
+			);
+			path = BeelineTests;
+			sourceTree = "<group>";
+		};
 		22B3A5E5269DC48000E1E843 = {
 			isa = PBXGroup;
 			children = (
 				22BCBE6826A293310081CADE /* Beeline */,
-				22B3A5F0269DC48000E1E843 /* BeelineTest */,
+				22B3A5F0269DC48000E1E843 /* BeelineExample */,
+				227B685626A706860000DD8D /* BeelineTests */,
 				22B3A5EF269DC48000E1E843 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,21 +84,23 @@
 		22B3A5EF269DC48000E1E843 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				22B3A5EE269DC48000E1E843 /* BeelineTest.app */,
+				22B3A5EE269DC48000E1E843 /* BeelineExample.app */,
+				227B685526A706860000DD8D /* BeelineTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		22B3A5F0269DC48000E1E843 /* BeelineTest */ = {
+		22B3A5F0269DC48000E1E843 /* BeelineExample */ = {
 			isa = PBXGroup;
 			children = (
+				227B686026A719FA0000DD8D /* BeelineExample.entitlements */,
 				22BCBE6E26A29DCB0081CADE /* AppRouter.swift */,
 				22B3A5F1269DC48000E1E843 /* AppDelegate.swift */,
 				22BCBE7026A29F350081CADE /* ViewController.swift */,
 				22BCBE7126A29F350081CADE /* ViewController.xib */,
 				22BCBE6D26A29DAF0081CADE /* Supporting */,
 			);
-			path = BeelineTest;
+			path = BeelineExample;
 			sourceTree = "<group>";
 		};
 		22BCBE6826A293310081CADE /* Beeline */ = {
@@ -89,9 +124,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		22B3A5ED269DC48000E1E843 /* BeelineTest */ = {
+		227B685426A706860000DD8D /* BeelineTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 22B3A602269DC48100E1E843 /* Build configuration list for PBXNativeTarget "BeelineTest" */;
+			buildConfigurationList = 227B685C26A706860000DD8D /* Build configuration list for PBXNativeTarget "BeelineTests" */;
+			buildPhases = (
+				227B685126A706860000DD8D /* Sources */,
+				227B685226A706860000DD8D /* Frameworks */,
+				227B685326A706860000DD8D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				227B685B26A706860000DD8D /* PBXTargetDependency */,
+			);
+			name = BeelineTests;
+			productName = BeelineTests;
+			productReference = 227B685526A706860000DD8D /* BeelineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		22B3A5ED269DC48000E1E843 /* BeelineExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22B3A602269DC48100E1E843 /* Build configuration list for PBXNativeTarget "BeelineExample" */;
 			buildPhases = (
 				22B3A5EA269DC48000E1E843 /* Sources */,
 				22B3A5EB269DC48000E1E843 /* Frameworks */,
@@ -101,9 +154,9 @@
 			);
 			dependencies = (
 			);
-			name = BeelineTest;
+			name = BeelineExample;
 			productName = RouterTest;
-			productReference = 22B3A5EE269DC48000E1E843 /* BeelineTest.app */;
+			productReference = 22B3A5EE269DC48000E1E843 /* BeelineExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -115,12 +168,16 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					227B685426A706860000DD8D = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 22B3A5ED269DC48000E1E843;
+					};
 					22B3A5ED269DC48000E1E843 = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
 			};
-			buildConfigurationList = 22B3A5E9269DC48000E1E843 /* Build configuration list for PBXProject "BeelineTest" */;
+			buildConfigurationList = 22B3A5E9269DC48000E1E843 /* Build configuration list for PBXProject "BeelineExample" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -133,12 +190,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				22B3A5ED269DC48000E1E843 /* BeelineTest */,
+				22B3A5ED269DC48000E1E843 /* BeelineExample */,
+				227B685426A706860000DD8D /* BeelineTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		227B685326A706860000DD8D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22B3A5EC269DC48000E1E843 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -152,6 +217,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		227B685126A706860000DD8D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				227B685F26A70C560000DD8D /* Router.swift in Sources */,
+				227B685826A706860000DD8D /* BeelineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		22B3A5EA269DC48000E1E843 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -165,6 +239,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		227B685B26A706860000DD8D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22B3A5ED269DC48000E1E843 /* BeelineExample */;
+			targetProxy = 227B685A26A706860000DD8D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		22B3A5FC269DC48100E1E843 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -177,6 +259,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		227B685D26A706860000DD8D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				INFOPLIST_FILE = BeelineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.BeelineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeelineExample.app/BeelineExample";
+			};
+			name = Debug;
+		};
+		227B685E26A706860000DD8D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				INFOPLIST_FILE = BeelineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.BeelineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeelineExample.app/BeelineExample";
+			};
+			name = Release;
+		};
 		22B3A600269DC48100E1E843 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -298,17 +420,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BeelineExample/BeelineExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
-				INFOPLIST_FILE = "$(SRCROOT)/BeelineTest/Supporting/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BeelineExample/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.BeelineTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -317,24 +442,36 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BeelineExample/BeelineExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
-				INFOPLIST_FILE = "$(SRCROOT)/BeelineTest/Supporting/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/BeelineExample/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.BeelineTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		22B3A5E9269DC48000E1E843 /* Build configuration list for PBXProject "BeelineTest" */ = {
+		227B685C26A706860000DD8D /* Build configuration list for PBXNativeTarget "BeelineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				227B685D26A706860000DD8D /* Debug */,
+				227B685E26A706860000DD8D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22B3A5E9269DC48000E1E843 /* Build configuration list for PBXProject "BeelineExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22B3A600269DC48100E1E843 /* Debug */,
@@ -343,7 +480,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		22B3A602269DC48100E1E843 /* Build configuration list for PBXNativeTarget "BeelineTest" */ = {
+		22B3A602269DC48100E1E843 /* Build configuration list for PBXNativeTarget "BeelineExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				22B3A603269DC48100E1E843 /* Debug */,
