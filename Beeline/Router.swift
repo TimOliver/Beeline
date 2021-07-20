@@ -110,7 +110,8 @@ public extension UIViewController {
             // (ie, it's the top of the chain), and we have a default
             // class registered, make and assign a router to it
             if let defaultRouterClass = defaultRouterClass,
-               viewController != nil, viewController!.parent == nil {
+               viewController != nil, viewController!.parent == nil,
+               viewController?.router == nil {
                 let objectClass = defaultRouterClass as! NSObject.Type
                 viewController?.router = objectClass.init() as? Router
             }
