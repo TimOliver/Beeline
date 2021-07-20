@@ -32,6 +32,7 @@
 		227B685526A706860000DD8D /* BeelineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeelineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		227B685726A706860000DD8D /* BeelineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeelineTests.swift; sourceTree = "<group>"; };
 		227B685926A706860000DD8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		227B686026A719FA0000DD8D /* BeelineExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BeelineExample.entitlements; sourceTree = "<group>"; };
 		22B3A5EE269DC48000E1E843 /* BeelineExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeelineExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22B3A5F1269DC48000E1E843 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22B3A5FA269DC48100E1E843 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 		22B3A5F0269DC48000E1E843 /* BeelineExample */ = {
 			isa = PBXGroup;
 			children = (
+				227B686026A719FA0000DD8D /* BeelineExample.entitlements */,
 				22BCBE6E26A29DCB0081CADE /* AppRouter.swift */,
 				22B3A5F1269DC48000E1E843 /* AppDelegate.swift */,
 				22BCBE7026A29F350081CADE /* ViewController.swift */,
@@ -418,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BeelineExample/BeelineExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				INFOPLIST_FILE = "$(SRCROOT)/BeelineExample/Supporting/Info.plist";
@@ -427,8 +430,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.BeelineTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -437,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BeelineExample/BeelineExample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				INFOPLIST_FILE = "$(SRCROOT)/BeelineExample/Supporting/Info.plist";
@@ -446,8 +452,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.BeelineTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};
