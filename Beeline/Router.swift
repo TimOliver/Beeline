@@ -20,7 +20,13 @@
 //  WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
 //  IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+#if os(iOS)
 import UIKit
+typealias ViewController = UIViewController
+#elseif os(macOS)
+import AppKit
+typealias ViewController = NSViewController
+#endif
 
 /// A router is an object that is used to serve as the single source
 /// of truth when dealing with the navigation flow of screens in complex
@@ -36,7 +42,7 @@ import UIKit
 open class Router: NSObject {
 
     /// A reference back to the view controller to which this router is assigned.
-    weak var rootViewController: UIViewController?
+    weak var rootViewController: ViewController?
 
     /// Normally view controllers that should serve as a router should have
     /// their router property manually configured. But for convenience, it is also
@@ -68,7 +74,7 @@ open class Router: NSObject {
     ///   - route: A custom object conforming to the `Route` protocol used to identify the intended destination of this transition
     ///   - sourceViewController: The view controller that created this request (can be nil if the router itself directly called it)
     /// - Returns: Returns true if this router successfully handled the request, or false if the router decided to skip it
-    func show(_ route: Route, from sourceViewController: UIViewController?) -> Bool {
+    func show(_ route: Route, from sourceViewController: ViewController?) -> Bool {
         fatalError("Router: This class must be subclassed and cannot be used directly.")
     }
 }
@@ -81,7 +87,7 @@ public protocol Route { }
 
 // MARK: - UIKit Integration -
 
-public extension UIViewController {
+public extension ViewController {
 
     /// A router object that is associated with this
     /// view controller. This router will capture all of the
@@ -101,7 +107,7 @@ public extension UIViewController {
     /// then serve as the source of truth for transition
     /// - Parameter route: Any object conforming to `Route` used to uniquely identify the desired destination
     func show(_ route: Route) {
-        var viewController: UIViewController? = self
+        var viewController: ViewController? = self
 
         // Starting at the calling view controller, go up the parent view controller
         // chain until we find one with an associated router that will handle the transition for us

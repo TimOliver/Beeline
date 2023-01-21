@@ -16,7 +16,7 @@ enum TestRoute: Route {
 class TestRouter: Router {
     var showResultsClosure: ((Route) -> Void)?
 
-    override func show(_ route: Route, from sourceViewController: UIViewController?) -> Bool {
+    override func show(_ route: Route, from sourceViewController: ViewController?) -> Bool {
         showResultsClosure?(route)
         return true
     }
@@ -31,7 +31,7 @@ class BeelineTests: XCTestCase {
 
     // Test setting and getting the same router instance from a VC
     func testRouterAssigning() {
-        let viewController = UIViewController()
+        let viewController = ViewController()
         let testRouter = TestRouter()
         viewController.router = testRouter
         XCTAssertEqual(testRouter, viewController.router)
@@ -51,9 +51,14 @@ class BeelineTests: XCTestCase {
         }
 
         // Attach the router to a view controller nested in another view controller
-        let viewController = UIViewController()
-        let navController = UINavigationController(rootViewController: viewController)
-        navController.router = testRouter
+        let viewController = ViewController()
+#if os(iOS)
+        let parentViewController = UINavigationController(rootViewController: viewController)
+#elseif os(macOS)
+        let parentViewController = ViewController()
+        parentViewController.addChild(viewController)
+#endif
+        parentViewController.router = testRouter
 
         // Call show on the view controller
         viewController.show(TestRoute.first)
@@ -68,14 +73,19 @@ class BeelineTests: XCTestCase {
         Router.registerDefaultClass(TestRouter.self)
 
         // Create a nested view controller setup
-        let viewController = UIViewController()
-        let navController = UINavigationController(rootViewController: viewController)
+        let viewController = ViewController()
+#if os(iOS)
+        let parentViewController = UINavigationController(rootViewController: viewController)
+#elseif os(macOS)
+        let parentViewController = ViewController()
+        parentViewController.addChild(viewController)
+#endif
 
         // Call show on the child, which will auto-generate a router on the nav controller
         viewController.show(TestRoute.first)
 
         // Check the expected output was correct
-        XCTAssertNotNil(navController.router)
-        XCTAssertTrue(navController.router is TestRouter)
+        XCTAssertNotNil(parentViewController.router)
+        XCTAssertTrue(parentViewController.router is TestRouter)
     }
 }
