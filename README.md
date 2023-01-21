@@ -86,7 +86,17 @@ pod 'Beeline'
 
 ### SPM
 
-I'll be adding this when I get the chance!
+You can add Beeline to an Xcode project by adding it as a package dependency.
+
+https://github.com/TimOliver/Beeline
+
+or, add the following to the dependencies in package.swift.
+
+```swift
+dependencies: [
+  .package(url: "https://github.com/TimOliver/Beeline", from: "1.0.2")
+]
+```
 
 ### Carthage
 
