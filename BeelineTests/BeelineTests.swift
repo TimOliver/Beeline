@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Beeline
 
 // Create a dummy destination to test
 enum TestRoute: Route {
