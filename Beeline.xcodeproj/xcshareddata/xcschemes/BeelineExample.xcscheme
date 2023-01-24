@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1420"
+   LastUpgradeVersion = "1410"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA37C3E0297C8CBA0079E96C"
-               BuildableName = "libBeeline.a"
-               BlueprintName = "Beeline"
+               BlueprintIdentifier = "22B3A5ED269DC48000E1E843"
+               BuildableName = "BeelineExample.app"
+               BlueprintName = "BeelineExample"
+               ReferencedContainer = "container:Beeline.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "227B685426A706860000DD8D"
+               BuildableName = "BeelineTests.xctest"
+               BlueprintName = "BeelineTests"
                ReferencedContainer = "container:Beeline.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA37C3EC297C8CFF0079E96C"
+               BlueprintIdentifier = "227B685426A706860000DD8D"
                BuildableName = "BeelineTests.xctest"
                BlueprintName = "BeelineTests"
                ReferencedContainer = "container:Beeline.xcodeproj">
@@ -50,6 +64,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "22B3A5ED269DC48000E1E843"
+            BuildableName = "BeelineExample.app"
+            BlueprintName = "BeelineExample"
+            ReferencedContainer = "container:Beeline.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -57,15 +81,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA37C3E0297C8CBA0079E96C"
-            BuildableName = "libBeeline.a"
-            BlueprintName = "Beeline"
+            BlueprintIdentifier = "22B3A5ED269DC48000E1E843"
+            BuildableName = "BeelineExample.app"
+            BlueprintName = "BeelineExample"
             ReferencedContainer = "container:Beeline.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

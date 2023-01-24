@@ -6,7 +6,6 @@
 //
 
 import XCTest
-@testable import Beeline
 
 // Create a dummy destination to test
 enum TestRoute: Route {
@@ -17,7 +16,7 @@ enum TestRoute: Route {
 class TestRouter: Router {
     var showResultsClosure: ((Route) -> Void)?
 
-    override func show(_ route: Route, from sourceViewController: ViewController?) -> Bool {
+    override func show(_ route: Route, from sourceViewController: UIViewController?) -> Bool {
         showResultsClosure?(route)
         return true
     }
@@ -32,7 +31,7 @@ class BeelineTests: XCTestCase {
 
     // Test setting and getting the same router instance from a VC
     func testRouterAssigning() {
-        let viewController = ViewController()
+        let viewController = UIViewController()
         let testRouter = TestRouter()
         viewController.router = testRouter
         XCTAssertEqual(testRouter, viewController.router)
@@ -52,13 +51,8 @@ class BeelineTests: XCTestCase {
         }
 
         // Attach the router to a view controller nested in another view controller
-        let viewController = ViewController()
-#if os(iOS)
+        let viewController = UIViewController()
         let parentViewController = UINavigationController(rootViewController: viewController)
-#elseif os(macOS)
-        let parentViewController = ViewController()
-        parentViewController.addChild(viewController)
-#endif
         parentViewController.router = testRouter
 
         // Call show on the view controller
@@ -74,13 +68,8 @@ class BeelineTests: XCTestCase {
         Router.registerDefaultClass(TestRouter.self)
 
         // Create a nested view controller setup
-        let viewController = ViewController()
-#if os(iOS)
+        let viewController = UIViewController()
         let parentViewController = UINavigationController(rootViewController: viewController)
-#elseif os(macOS)
-        let parentViewController = ViewController()
-        parentViewController.addChild(viewController)
-#endif
 
         // Call show on the child, which will auto-generate a router on the nav controller
         viewController.show(TestRoute.first)
