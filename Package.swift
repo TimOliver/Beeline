@@ -14,6 +14,12 @@ let package = Package(
     targets: [
         .target(
             name: "Beeline",
-            path: "Beeline")
+            path: "Beeline"),
+        .testTarget(
+            name: "BeelineTests",
+            dependencies: [
+                "Beeline"
+            ],
+            path: "BeelineTests")
     ]
 )
