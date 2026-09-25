@@ -16,7 +16,7 @@ enum AppRoute: Route {
 // Our subclass of Router to contain our custom presentation logic
 public class AppRouter: Router {
 
-    override func show(_ route: Route,
+    public override func show(_ route: Route,
                        from sourceViewController: UIViewController?) -> Bool {
         // We're only interested in routes from the AppRoute enum
         guard let appRoute = route as? AppRoute else { return false }
@@ -24,10 +24,13 @@ public class AppRouter: Router {
         // Check which enum was requested and produce a view controller for it
         switch appRoute {
         case .viewController(let number):
+            // Navigate in the container owned by this router, even when the
+            // request came from a different, presented navigation stack.
+            guard let navigationController = rootViewController as? UINavigationController,
+                  navigationController.presentedViewController == nil,
+                  navigationController.transitionCoordinator == nil else { return false }
             let newViewController = ViewController(number: number)
-            sourceViewController?
-                .navigationController?
-                .pushViewController(newViewController, animated: true)
+            navigationController.pushViewController(newViewController, animated: true)
         }
 
         return true

@@ -14,11 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions
                         launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        // Register our global router
-        Router.registerDefaultClass(AppRouter.self)
-
         // Create the navigation controller
         let navigationController = UINavigationController(rootViewController: ViewController(number: 1))
+        // Explicit construction also supports routers with injected dependencies.
+        navigationController.router = AppRouter()
 
         // Create and show the window
         window = UIWindow(frame: UIScreen.main.bounds)

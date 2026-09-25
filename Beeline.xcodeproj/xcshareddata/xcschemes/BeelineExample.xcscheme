@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "227B685426A706860000DD8D"
+               BlueprintIdentifier = "2284DDFE298028C7003A3371"
                BuildableName = "BeelineTests.xctest"
                BlueprintName = "BeelineTests"
                ReferencedContainer = "container:Beeline.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "227B685426A706860000DD8D"
+               BlueprintIdentifier = "2284DDFE298028C7003A3371"
                BuildableName = "BeelineTests.xctest"
                BlueprintName = "BeelineTests"
                ReferencedContainer = "container:Beeline.xcodeproj">
